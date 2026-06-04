@@ -1,0 +1,12 @@
+{
+  "name": "dinosaur-day",
+  "version": "1.0.0",
+  "description": "A first-person survival shooter set in a world of dinosaurs, built with Three.js.",
+  "type": "module",
+  "scripts": {
+    "start": "npx --yes serve -l 8080 .",
+    "dev": "python3 -m http.server 8080"
+  },
+  "keywords": ["game", "threejs", "fps", "survival", "dinosaurs", "webgl"],
+  "license": "MIT"
+}

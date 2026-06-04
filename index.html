@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dinosaur Day — FPV Survival</title>
+  <link rel="stylesheet" href="./src/style.css" />
+</head>
+<body>
+  <!-- Crosshair -->
+  <div id="crosshair" class="hidden">
+    <div class="ch-dot"></div>
+    <div class="ch-line ch-top"></div>
+    <div class="ch-line ch-bottom"></div>
+    <div class="ch-line ch-left"></div>
+    <div class="ch-line ch-right"></div>
+  </div>
+
+  <!-- HUD -->
+  <div id="hud" class="hidden">
+    <div class="hud-top">
+      <div class="hud-stat">
+        <span class="label">WAVE</span>
+        <span id="wave" class="value">1</span>
+      </div>
+      <div class="hud-stat">
+        <span class="label">SCORE</span>
+        <span id="score" class="value">0</span>
+      </div>
+      <div class="hud-stat">
+        <span class="label">DINOS LEFT</span>
+        <span id="enemies" class="value">0</span>
+      </div>
+    </div>
+
+    <div class="hud-bottom">
+      <div class="bar-group">
+        <span class="bar-label">HEALTH</span>
+        <div class="bar"><div id="health-fill" class="bar-fill health"></div></div>
+      </div>
+      <div class="ammo">
+        <span id="ammo" class="ammo-count">12</span>
+        <span class="ammo-sep">/</span>
+        <span id="reserve" class="ammo-reserve">48</span>
+        <span id="reloading" class="reloading hidden">RELOADING…</span>
+      </div>
+    </div>
+
+    <div id="hitmarker" class="hidden">✕</div>
+    <div id="damage-vignette"></div>
+  </div>
+
+  <!-- Start / overlay screen -->
+  <div id="overlay">
+    <div class="panel">
+      <h1>DINOSAUR&nbsp;DAY</h1>
+      <p class="tagline">A first-person survival shooter in a world ruled by dinosaurs.</p>
+      <div id="overlay-stats" class="hidden"></div>
+      <button id="start-btn">CLICK TO PLAY</button>
+      <div class="controls">
+        <div><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> Move</div>
+        <div><kbd>Mouse</kbd> Look</div>
+        <div><kbd>Left&nbsp;Click</kbd> Shoot</div>
+        <div><kbd>Shift</kbd> Sprint</div>
+        <div><kbd>Space</kbd> Jump</div>
+        <div><kbd>R</kbd> Reload</div>
+        <div><kbd>Esc</kbd> Pause</div>
+      </div>
+      <p class="hint">Survive the waves. They get bigger. Good luck.</p>
+    </div>
+  </div>
+
+  <!-- Three.js via CDN import map (works for local play) -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
